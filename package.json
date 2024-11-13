@@ -1,0 +1,32 @@
+{
+  "name": "farmers-market",
+  "version": "1.0.0",
+  "description": "Web Development Project",
+  "main": "server.js",
+  "repository": "https://github.com/DhruveshSolanki/farmers-market.git",
+  "author": "DhruveshSolanki <dvsolanki21@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently 'vite' \"nodemon ../server.js\"",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "compression": "^1.7.5",
+    "concurrently": "^9.1.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.8.1",
+    "vite": "^5.4.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "nodemon": "^3.1.7"
+  }
+}
