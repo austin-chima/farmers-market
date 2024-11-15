@@ -1,0 +1,23 @@
+.farm-farmer-home .farm-farmer-home-top {
+    background-image: url('../assets/images/agro4.jpg');
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: left center;
+    background-size: cover;
+    padding-top: 300px;
+    padding-bottom: 200px;
+}
+
+.farm-farmer-home .farm-farmer-home-bottom {
+    margin-bottom: 1rem;
+}
+
+.card {
+    width: 250px;
+}
+
+.cont {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}

@@ -1,0 +1,51 @@
+.farm-home {
+    background-image: url('../assets/images/agro1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.farm-home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    z-index: 0;
+    background-image: url('../assets/images/overlay_img.png');
+    opacity: .5;
+}
+
+.farm-home .farm-home-overlay {
+    height: inherit;
+    position: relative;
+}
+
+.farm-home .farm-home-container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.farm-home .farm-home-container .farm-name {
+    line-height: 1;
+    font-size: 3.5rem;
+    font-weight: 100;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+}
+
+.farm-home .farm-home-container .farm-title {
+    line-height: 1.2;
+    font-size: 4.5rem;
+    font-weight: 900;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
+    transition: color .3s ease-in-out;
+}

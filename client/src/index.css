@@ -1,68 +1,188 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css?family=Open%20Sans%3A300%2C400%2C500%2C600%2C700%2C800%7CRaleway%3A100%2C400%2C400i%2C500%2C500i%2C700%2C700i%2C900&#038;subset=latin%2Clatin-ext&#038;display=swap");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  line-height: 1.6;
+  font-size: 1.4rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #666;
+  background-color: #fff
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.farm-btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 28px;
+  padding-right: 28px;
+  line-height: 1;
+  font-size: 1.2rem;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-shadow: none !important;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: #4f4a37;
+  border: 2px solid #fcdb5a;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-transition: background-color .25s ease-in-out, border-color .25s ease-in-out, color .25s ease-in-out;
+  -o-transition: background-color .25s ease-in-out, border-color .25s ease-in-out, color .25s ease-in-out;
+  transition: background-color .25s ease-in-out, border-color .25s ease-in-out, color .25s ease-in-out;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.farm-btn-big {
+  min-width: 200px;
+  min-height: 56px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.farm-btn-big:hover{
+  background-color: #fcdb5a;
+  color: #4f4a37;
+}
+
+.farm-btn-small{
+  min-width: 160px;
+  min-height: 45px;
+  padding-top: 10px;
+  padding-bottom: 9px;
+  background-color: #fcdb5a;
+}
+
+.farm-btn-small:hover{
+  background-color: #ffcb00;
+}
+
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.9s;
+  transition-duration: 0.9s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger-box {
+  width: 30px;
+  height: 21px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -1.5px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 30px;
+  height: 3px;
+  background-color: #444;
+  border-radius: 10px;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -9px;
+}
+
+.hamburger-inner::after {
+  bottom: -9px;
+}
+
+.hamburger--elastic .hamburger-inner {
+  top: 1.5px;
+  -webkit-transition-duration: 0.45s;
+  transition-duration: 0.45s;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hamburger--elastic .hamburger-inner::before {
+  top: 9px;
+  -webkit-transition: opacity 0.43s 0.275s ease;
+  transition: opacity 0.43s 0.275s ease;
+}
+
+.hamburger--elastic .hamburger-inner::after {
+  top: 18px;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: -webkit-transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hamburger--elastic.is-active .hamburger-inner {
+  -webkit-transform: translate3d(0, 9px, 0) rotate(135deg);
+  transform: translate3d(0, 9px, 0) rotate(135deg);
+  -webkit-transition-delay: 0.075s;
+  transition-delay: 0.075s;
+}
+
+.hamburger--elastic.is-active .hamburger-inner::before {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  opacity: 0;
+}
+
+.hamburger--elastic.is-active .hamburger-inner::after {
+  -webkit-transform: translate3d(0, -18px, 0) rotate(-270deg);
+  transform: translate3d(0, -18px, 0) rotate(-270deg);
+  -webkit-transition-delay: 0.075s;
+  transition-delay: 0.075s;
 }
