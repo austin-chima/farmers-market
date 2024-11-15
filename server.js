@@ -13,9 +13,6 @@ app.get("/api/v1", (req, res) => {
         from: "ExpressCrew",
     });
 });
-app.get("/*", (_req, res) => {
-    res.sendFile(path.join(__dirname, "public", "index.html"));
-})
 
 app.listen(config.port, () => {
     console.log();
@@ -23,6 +20,19 @@ app.listen(config.port, () => {
     console.log();
     console.log(`> Local: \x1b[36mhttp://localhost:\x1b[1m${config.port}/\x1b[0m`);
 });
+
+// Middleware to parse JSON bodies
+app.use(express.json());
+
+// Middleware to parse URL-encoded bodies (for form data)
+app.use(express.urlencoded({ extended: true }));
+
+// Routes
+app.use('/api/v1/products', require('./server/routes/products.routes.js'));
+
+app.get("/*", (_req, res) => {
+    res.sendFile(path.join(__dirname, "public", "index.html"));
+})
 
 mongoose.Promise = global.Promise
 
