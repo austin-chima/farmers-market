@@ -7,5 +7,8 @@ const productCtrl = require('../controllers/product.controller.js');
 router.route('/')
     .post(productCtrl.createProduct)
 
+//update product by id 
+router.route('/:id')
+    .put(productCtrl.updateProduct);
 
 module.exports = router;
