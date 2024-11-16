@@ -21,4 +21,8 @@ router.route('/:id/stock')
 router.route('/:id/stock')
     .put(productCtrl.updateProductStock);
 
+//update product price by id
+router.route('/:id/price')
+    .put(productCtrl.updateProductPrice);
+
 module.exports = router;
