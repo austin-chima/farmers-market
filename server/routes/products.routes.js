@@ -10,6 +10,11 @@ router.route('/')
 
 //update product by id 
 router.route('/:id')
-    .put(productCtrl.updateProduct);
+    .put(productCtrl.updateProduct)
+    .delete(productCtrl.deleteProduct)
+
+//update product stock by id 
+router.route('/:id/stock')
+    .put(productCtrl.updateProductStock);
 
 module.exports = router;
