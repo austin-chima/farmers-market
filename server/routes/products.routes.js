@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-
 const productCtrl = require('../controllers/product.controller.js');
+const authenticateToken = require('../middleware/auth');
 
 //create product endpoint
 router.route('/')
@@ -21,8 +21,8 @@ router.route('/:id/stock')
 router.route('/:id/stock')
     .put(productCtrl.updateProductStock);
 
-//update product price by id
+//update product price by id with authentication
 router.route('/:id/price')
-    .put(productCtrl.updateProductPrice);
+    .put(authenticateToken, productCtrl.updateProductPrice);
 
 module.exports = router;
